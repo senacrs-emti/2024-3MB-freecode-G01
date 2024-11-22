@@ -78,7 +78,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center|start"
             android:layout_marginLeft="45dp"
-            android:layout_marginTop="-90dp"
+            android:layout_marginTop="-110dp"
             android:fontFamily="@font/amaranth"
             android:text="Nome de usuário:"
             android:textColor="#EFF8FD"
@@ -89,10 +89,44 @@
             android:layout_width="287dp"
             android:layout_height="31dp"
             android:layout_gravity="center"
-            android:layout_marginTop="-55dp"
-            android:background="#FFFFFF"
+            android:layout_marginTop="-75dp"
+            android:background="#E4EEF3"
             android:ems="10"
             android:inputType="text" />
+
+        <TextView
+            android:id="@+id/textSenha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|start"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="-30dp"
+            android:fontFamily="@font/amaranth"
+            android:text="Senha:"
+            android:textColor="#EFF8FD"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/editTextTextPassword"
+            android:layout_width="287dp"
+            android:layout_height="31dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:background="#E4EEF3"
+            android:ems="10"
+            android:inputType="textPassword" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|start"
+            android:layout_marginLeft="45dp"
+            android:layout_marginBottom="-60dp"
+            android:fontFamily="@font/amaranth"
+            android:text="Escolha uma foto de perfil:"
+            android:textColor="#EFF8FD"
+            android:textSize="16sp" />
     </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
