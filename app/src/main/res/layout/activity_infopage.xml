@@ -98,14 +98,15 @@
 
                 <TextView
                     android:id="@+id/textView4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|center"
-                    android:fontFamily="@font/amaranth"
-                    android:paddingBottom="20dp"
+                    android:layout_width="305dp"
+                    android:layout_height="158dp"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/amiko"
+                    android:paddingTop="30dp"
                     android:text="São aquelas em risco de extinção devido a fatores naturais ou ações humanas. Elas são classificadas em categorias de acordo com o grau de ameaça: vulneráveis (risco alto), em perigo (risco muito alto), criticamente em perigo (risco extremamente alto), extintas na natureza (existem apenas em cativeiro ou fora de seus habitats naturais) e extintas (sem indivíduos vivos conhecidos)."
-                    android:textAlignment="center"
-                    android:textColor="#FFFFFF" />
+                    android:textAlignment="gravity"
+                    android:textColor="#FAFAFA"
+                    android:textSize="12sp" />
 
             </androidx.cardview.widget.CardView>
 

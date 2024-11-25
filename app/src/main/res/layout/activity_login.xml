@@ -48,13 +48,16 @@
         app:srcCompat="@drawable/logo" />
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
         android:layout_width="339dp"
-        android:layout_height="420dp"
+        android:layout_height="450dp"
         android:layout_marginStart="36dp"
-        android:layout_marginTop="47dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="36dp"
+        android:layout_marginBottom="68dp"
         android:backgroundTint="#1B485F"
         app:cardCornerRadius="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/cardView3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -78,7 +81,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center|start"
             android:layout_marginLeft="45dp"
-            android:layout_marginTop="-110dp"
+            android:layout_marginTop="-130dp"
             android:fontFamily="@font/amaranth"
             android:text="Nome de usuário:"
             android:textColor="#EFF8FD"
@@ -89,7 +92,7 @@
             android:layout_width="287dp"
             android:layout_height="31dp"
             android:layout_gravity="center"
-            android:layout_marginTop="-75dp"
+            android:layout_marginTop="-95dp"
             android:background="#E4EEF3"
             android:ems="10"
             android:inputType="text" />
@@ -100,7 +103,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center|start"
             android:layout_marginLeft="45dp"
-            android:layout_marginTop="-30dp"
+            android:layout_marginTop="-50dp"
             android:fontFamily="@font/amaranth"
             android:text="Senha:"
             android:textColor="#EFF8FD"
@@ -111,7 +114,7 @@
             android:layout_width="287dp"
             android:layout_height="31dp"
             android:layout_gravity="center"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="-15dp"
             android:background="#E4EEF3"
             android:ems="10"
             android:inputType="textPassword" />
@@ -122,11 +125,127 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center|start"
             android:layout_marginLeft="45dp"
-            android:layout_marginBottom="-60dp"
+            android:layout_marginBottom="-40dp"
             android:fontFamily="@font/amaranth"
             android:text="Escolha uma foto de perfil:"
             android:textColor="#EFF8FD"
             android:textSize="16sp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:layout_gravity="bottom|left"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="75dp"
+            app:cardCornerRadius="100dp">
+
+            <ImageButton
+                android:id="@+id/imageButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/cajo" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:layout_gravity="bottom|center"
+            android:layout_marginBottom="75dp"
+            app:cardCornerRadius="100dp">
+
+            <ImageButton
+                android:id="@+id/imageButton4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/pato" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:layout_gravity="bottom|right"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="75dp"
+            app:cardCornerRadius="100dp">
+
+            <ImageButton
+                android:id="@+id/imageButton5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/urso" />
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/acessarButton"
+            android:layout_width="287dp"
+            android:layout_height="45dp"
+            android:layout_gravity="bottom|center"
+            android:layout_marginBottom="15dp"
+            android:backgroundTint="#E4EEF3"
+            android:fontFamily="@font/londrina_solid"
+            android:text="ACESSAR"
+            android:textAlignment="center"
+            android:textColor="#1B485F"
+            android:textSize="24dp"
+            app:cornerRadius="15dp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardLogin"
+        android:layout_width="339dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="5dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView2">
+
+        <ImageView
+            android:id="@+id/imageBottom2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/image1" />
+
+        <ImageButton
+            android:id="@+id/imageBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.8"
+            android:background="@null"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/image2" />
+
+        <TextView
+            android:id="@+id/textBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/londrina_solid"
+            android:text="Desenvolvedores"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/textSetaBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|right"
+            android:paddingRight="5dp"
+            android:text="➜"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp" />
     </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
