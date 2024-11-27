@@ -53,8 +53,9 @@
                 app:srcCompat="@drawable/profilebutton" />
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/cardAnimais"
                 android:layout_width="411dp"
-                android:layout_height="380dp"
+                android:layout_height="800dp"
                 android:backgroundTint="#8FBE9E"
                 app:cardCornerRadius="30dp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -102,6 +103,7 @@
                     android:layout_gravity="left"
                     android:layout_marginLeft="30dp"
                     android:layout_marginTop="125dp"
+                    app:cardBackgroundColor="#FFF5D1"
                     app:cardCornerRadius="10dp" />
 
                 <androidx.cardview.widget.CardView
@@ -110,15 +112,16 @@
                     android:layout_gravity="right"
                     android:layout_marginTop="125dp"
                     android:layout_marginRight="40dp"
+                    app:cardBackgroundColor="#FFF5D1"
                     app:cardCornerRadius="10dp" />
 
                 <TextView
                     android:id="@+id/textView24"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|left"
+                    android:layout_gravity="top|left"
                     android:layout_marginLeft="45dp"
-                    android:layout_marginBottom="180dp"
+                    android:layout_marginTop="200dp"
                     android:fontFamily="@font/londrina_solid"
                     android:text="SOBRE:"
                     android:textColor="#1B455B"
@@ -128,11 +131,29 @@
                     android:id="@+id/textView25"
                     android:layout_width="329dp"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|left"
+                    android:layout_gravity="top|left"
                     android:layout_marginLeft="45dp"
-                    android:layout_marginBottom="75dp"
+                    android:layout_marginTop="230dp"
                     android:justificationMode="inter_word"
                     android:text="Sed ut perspiciatis unde omnis iste natus error sit  voluptatem accusantium doloremque laudantium,   rem aperiam, eaque ipsa quae ab illo inventore verit  quasi architecto beatae vitae dicta sunt explicabo, ipsam voluptatem quia voluptas sit aspernatur auteaque ipsa quae ab illo inventore." />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="411dp"
+                    android:layout_height="400dp"
+                    android:layout_gravity="bottom"
+                    android:backgroundTint="#B3E3C2"
+                    app:cardCornerRadius="20dp" >
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+                    </TableLayout>
+                </androidx.cardview.widget.CardView>
 
             </androidx.cardview.widget.CardView>
 

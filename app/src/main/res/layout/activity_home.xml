@@ -72,14 +72,14 @@
                 app:layout_constraintTop_toBottomOf="@+id/subtitulo">
 
                 <ImageView
-                    android:id="@+id/imageCardTop2"
+                    android:id="@+id/fundoTop1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:scaleType="centerCrop"
                     app:srcCompat="@drawable/image1" />
 
                 <ImageButton
-                    android:id="@+id/imageButton3"
+                    android:id="@+id/fundoTop2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:alpha="0.8"
@@ -219,7 +219,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/cardAnfibios">
 
                 <ImageButton
-                    android:id="@+id/imageButton7"
+                    android:id="@+id/imageAves"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@null"
@@ -251,7 +251,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/cardMamiferos">
 
                 <ImageButton
-                    android:id="@+id/imageButton8"
+                    android:id="@+id/imageRepteis"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@null"
@@ -304,7 +304,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cardLogin"
+                android:id="@+id/cardDevLogin"
                 android:layout_width="339dp"
                 android:layout_height="51dp"
                 android:layout_marginStart="35dp"
@@ -319,14 +319,14 @@
                 app:layout_constraintVertical_bias="1.0">
 
                 <ImageView
-                    android:id="@+id/imageBottom2"
+                    android:id="@+id/fundoBottom1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:scaleType="centerCrop"
                     app:srcCompat="@drawable/image1" />
 
                 <ImageButton
-                    android:id="@+id/imageBottom"
+                    android:id="@+id/fundoBottom2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:alpha="0.8"

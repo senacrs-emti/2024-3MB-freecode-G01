@@ -60,14 +60,14 @@
         app:layout_constraintTop_toBottomOf="@+id/imageDev">
 
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/fundoDev1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:scaleType="centerCrop"
             app:srcCompat="@drawable/image1" />
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/fundoDev2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:alpha="0.8"
@@ -75,7 +75,7 @@
             app:srcCompat="@drawable/image2" />
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/textCardEsp1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center|top"
@@ -86,7 +86,7 @@
             android:textSize="26sp" />
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/textCardEsp2"
             android:layout_width="300dp"
             android:layout_height="200dp"
             android:layout_gravity="center"
@@ -104,27 +104,32 @@
         android:id="@+id/textDevs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="207dp"
         android:fontFamily="@font/londrina_solid"
         android:text="Desenvolvedores"
         android:textColor="#1B485F"
         android:textSize="26sp"
-        tools:layout_editor_absoluteX="39dp"
-        tools:layout_editor_absoluteY="400dp" />
+        app:layout_constraintBottom_toTopOf="@+id/perfilDev1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardEspecies" />
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardView5"
+        android:id="@+id/perfilDev1"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_marginStart="39dp"
         android:layout_marginTop="19dp"
         android:layout_marginBottom="10dp"
         app:cardCornerRadius="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/cardView4"
+        app:layout_constraintBottom_toTopOf="@+id/perfilDev2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textDevs" >
 
         <ImageView
-            android:id="@+id/imageView3"
+            android:id="@+id/imgPerfilDev1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:scaleType="centerCrop"
@@ -132,19 +137,19 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardView4"
+        android:id="@+id/perfilDev2"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_marginStart="39dp"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
         app:cardCornerRadius="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/cardView6"
+        app:layout_constraintBottom_toTopOf="@+id/perfilDev3"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView5" >
+        app:layout_constraintTop_toBottomOf="@+id/perfilDev1" >
 
         <ImageView
-            android:id="@+id/imageView4"
+            android:id="@+id/imgPerfilDev2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:scaleType="centerCrop"
@@ -152,7 +157,7 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardView6"
+        android:id="@+id/perfilDev3"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_marginStart="39dp"
@@ -161,10 +166,10 @@
         app:cardCornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView4" >
+        app:layout_constraintTop_toBottomOf="@+id/perfilDev2">
 
         <ImageView
-            android:id="@+id/imageView5"
+            android:id="@+id/imgPerfilDev3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:scaleType="centerCrop"
@@ -172,59 +177,67 @@
     </androidx.cardview.widget.CardView>
 
     <TextView
-        android:id="@+id/textView13"
+        android:id="@+id/textPerfil1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
+        android:layout_marginTop="22dp"
         android:layout_marginEnd="216dp"
         android:fontFamily="@font/amaranth"
         android:text="Ellen Vargas"
         android:textColor="#1B485F"
+        app:layout_constraintBottom_toTopOf="@+id/textPerfil4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/cardView5"
-        tools:layout_editor_absoluteY="453dp" />
+        app:layout_constraintStart_toEndOf="@+id/perfilDev1"
+        app:layout_constraintTop_toBottomOf="@+id/textDevs" />
 
     <TextView
-        android:id="@+id/textView14"
+        android:id="@+id/textPerfil2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
+        android:layout_marginTop="1dp"
         android:layout_marginEnd="203dp"
+        android:layout_marginBottom="1dp"
         android:fontFamily="@font/amaranth"
         android:text="Pedro Santana"
         android:textColor="#1B485F"
+        app:layout_constraintBottom_toTopOf="@+id/textPerfil5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/cardView4"
-        tools:layout_editor_absoluteY="546dp" />
+        app:layout_constraintStart_toEndOf="@+id/perfilDev2"
+        app:layout_constraintTop_toBottomOf="@+id/textPerfil7" />
 
     <TextView
-        android:id="@+id/textView15"
+        android:id="@+id/textPerfil3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
+        android:layout_marginTop="36dp"
         android:layout_marginEnd="188dp"
         android:fontFamily="@font/amaranth"
         android:text="Raphael Barcelos"
         android:textColor="#1B485F"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/cardView6"
-        tools:layout_editor_absoluteY="639dp" />
+        app:layout_constraintStart_toEndOf="@+id/perfilDev3"
+        app:layout_constraintTop_toBottomOf="@+id/textPerfil8" />
 
     <TextView
-        android:id="@+id/textView16"
+        android:id="@+id/textPerfil4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="13dp"
+        android:layout_marginTop="1dp"
         android:layout_marginEnd="236dp"
         android:fontFamily="@font/amaranth"
         android:text="Designer"
         android:textColor="#1B485F"
+        app:layout_constraintBottom_toTopOf="@+id/textPerfil7"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/cardView5"
-        tools:layout_editor_absoluteY="471dp" />
+        app:layout_constraintStart_toEndOf="@+id/perfilDev1"
+        app:layout_constraintTop_toBottomOf="@+id/textPerfil1" />
 
     <TextView
-        android:id="@+id/textView17"
+        android:id="@+id/textPerfil5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="13dp"
@@ -232,12 +245,13 @@
         android:fontFamily="@font/amaranth"
         android:text="Programador"
         android:textColor="#1B485F"
+        app:layout_constraintBottom_toTopOf="@+id/textPerfil8"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/cardView4"
-        tools:layout_editor_absoluteY="564dp" />
+        app:layout_constraintStart_toEndOf="@+id/perfilDev2"
+        app:layout_constraintTop_toBottomOf="@+id/textPerfil2" />
 
     <TextView
-        android:id="@+id/textView18"
+        android:id="@+id/textPerfil6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="13dp"
@@ -245,46 +259,55 @@
         android:fontFamily="@font/amaranth"
         android:text="Programador"
         android:textColor="#1B485F"
+        app:layout_constraintBottom_toTopOf="@+id/textPerfil9"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/cardView6"
-        tools:layout_editor_absoluteY="657dp" />
+        app:layout_constraintStart_toEndOf="@+id/perfilDev3"
+        app:layout_constraintTop_toBottomOf="@+id/textPerfil3" />
 
     <TextView
-        android:id="@+id/textView19"
+        android:id="@+id/textPerfil7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="13dp"
+        android:layout_marginTop="1dp"
         android:layout_marginEnd="269dp"
+        android:layout_marginBottom="37dp"
         android:text="git:"
         android:textColor="#1B485F"
+        app:layout_constraintBottom_toTopOf="@+id/textPerfil2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/cardView5"
-        tools:fontFamily="@font/amaranth"
-        tools:layout_editor_absoluteY="489dp" />
+        app:layout_constraintStart_toEndOf="@+id/perfilDev1"
+        app:layout_constraintTop_toBottomOf="@+id/textPerfil4"
+        tools:fontFamily="@font/amaranth" />
 
     <TextView
-        android:id="@+id/textView20"
+        android:id="@+id/textPerfil8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="13dp"
+        android:layout_marginTop="1dp"
         android:layout_marginEnd="270dp"
+        android:layout_marginBottom="36dp"
         android:text="git:"
         android:textColor="#1B485F"
+        app:layout_constraintBottom_toTopOf="@+id/textPerfil3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/cardView4"
-        tools:layout_editor_absoluteY="582dp" />
+        app:layout_constraintStart_toEndOf="@+id/perfilDev2"
+        app:layout_constraintTop_toBottomOf="@+id/textPerfil5" />
 
     <TextView
-        android:id="@+id/textView21"
+        android:id="@+id/textPerfil9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
         android:layout_marginEnd="270dp"
+        android:layout_marginBottom="39dp"
         android:fontFamily="@font/amaranth"
         android:text="git:"
         android:textColor="#1B485F"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/cardView6"
-        tools:layout_editor_absoluteY="675dp" />
+        app:layout_constraintStart_toEndOf="@+id/perfilDev3"
+        app:layout_constraintTop_toBottomOf="@+id/textPerfil6" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

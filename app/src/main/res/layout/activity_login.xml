@@ -36,7 +36,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/fundoTop2"
         android:layout_width="85dp"
         android:layout_height="85dp"
         android:layout_marginTop="30dp"
@@ -48,7 +48,7 @@
         app:srcCompat="@drawable/logo" />
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardView2"
+        android:id="@+id/cardLoginPag"
         android:layout_width="339dp"
         android:layout_height="450dp"
         android:layout_marginStart="36dp"
@@ -57,7 +57,6 @@
         android:layout_marginBottom="68dp"
         android:backgroundTint="#1B485F"
         app:cardCornerRadius="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/cardView3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -76,7 +75,7 @@
             android:textSize="36sp" />
 
         <TextView
-            android:id="@+id/textView11"
+            android:id="@+id/textNome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center|start"
@@ -88,7 +87,7 @@
             android:textSize="16sp" />
 
         <EditText
-            android:id="@+id/editTextText"
+            android:id="@+id/editTextNome"
             android:layout_width="287dp"
             android:layout_height="31dp"
             android:layout_gravity="center"
@@ -110,7 +109,7 @@
             android:textSize="16sp" />
 
         <EditText
-            android:id="@+id/editTextTextPassword"
+            android:id="@+id/editTextSenha"
             android:layout_width="287dp"
             android:layout_height="31dp"
             android:layout_gravity="center"
@@ -120,7 +119,7 @@
             android:inputType="textPassword" />
 
         <TextView
-            android:id="@+id/textView12"
+            android:id="@+id/textProfilePic"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center|start"
@@ -132,6 +131,7 @@
             android:textSize="16sp" />
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cardPerfil1"
             android:layout_width="85dp"
             android:layout_height="85dp"
             android:layout_gravity="bottom|left"
@@ -140,7 +140,7 @@
             app:cardCornerRadius="100dp">
 
             <ImageButton
-                android:id="@+id/imageButton2"
+                android:id="@+id/imageProfile1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@null"
@@ -149,6 +149,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cardPerfil2"
             android:layout_width="85dp"
             android:layout_height="85dp"
             android:layout_gravity="bottom|center"
@@ -156,7 +157,7 @@
             app:cardCornerRadius="100dp">
 
             <ImageButton
-                android:id="@+id/imageButton4"
+                android:id="@+id/imageProfile2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@null"
@@ -165,6 +166,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cardPerfil3"
             android:layout_width="85dp"
             android:layout_height="85dp"
             android:layout_gravity="bottom|right"
@@ -173,7 +175,7 @@
             app:cardCornerRadius="100dp">
 
             <ImageButton
-                android:id="@+id/imageButton5"
+                android:id="@+id/imageProfile3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@null"
@@ -198,7 +200,7 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardLogin"
+        android:id="@+id/cardDevLogin"
         android:layout_width="339dp"
         android:layout_height="51dp"
         android:layout_marginStart="36dp"
@@ -209,17 +211,17 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView2">
+        app:layout_constraintTop_toBottomOf="@+id/cardLoginPag">
 
         <ImageView
-            android:id="@+id/imageBottom2"
+            android:id="@+id/fundoBottom1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:scaleType="centerCrop"
             app:srcCompat="@drawable/image1" />
 
         <ImageButton
-            android:id="@+id/imageBottom"
+            android:id="@+id/fundoBottom2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:alpha="0.8"
