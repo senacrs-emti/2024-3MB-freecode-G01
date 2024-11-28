@@ -19,11 +19,11 @@
         android:text="ECOEXPLORA"
         android:textColor="#1B485F"
         android:textSize="36sp"
-        app:layout_constraintStart_toEndOf="@+id/seta3"
+        app:layout_constraintStart_toEndOf="@+id/setaAnimais"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/seta3"
+        android:id="@+id/setaAnimais"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -51,16 +51,17 @@
         android:id="@+id/cardLoginPag"
         android:layout_width="339dp"
         android:layout_height="450dp"
-        android:layout_marginStart="36dp"
+        android:layout_marginStart="25dp"
         android:layout_marginTop="30dp"
-        android:layout_marginEnd="36dp"
-        android:layout_marginBottom="68dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
         android:backgroundTint="#1B485F"
         app:cardCornerRadius="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/cardDevLogin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/seta3">
+        app:layout_constraintTop_toBottomOf="@+id/setaAnimais">
 
         <TextView
             android:id="@+id/tituloLogin"
@@ -94,7 +95,8 @@
             android:layout_marginTop="-95dp"
             android:background="#E4EEF3"
             android:ems="10"
-            android:inputType="text" />
+            android:inputType="text"
+            android:textColor="#000000" />
 
         <TextView
             android:id="@+id/textSenha"
@@ -116,7 +118,8 @@
             android:layout_marginTop="-15dp"
             android:background="#E4EEF3"
             android:ems="10"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:textColor="#000000" />
 
         <TextView
             android:id="@+id/textProfilePic"
@@ -204,7 +207,7 @@
         android:layout_width="339dp"
         android:layout_height="51dp"
         android:layout_marginStart="36dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="36dp"
         android:layout_marginBottom="5dp"
         app:cardCornerRadius="10dp"

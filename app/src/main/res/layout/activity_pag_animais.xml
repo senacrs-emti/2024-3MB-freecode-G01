@@ -9,27 +9,28 @@
     tools:context=".PagAnimais">
 
     <ScrollView
-        android:layout_width="409dp"
-        android:layout_height="729dp"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp">
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <!-- Substituindo o ConstraintLayout por um FrameLayout -->
+        <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <ImageView
-                android:id="@+id/imageView6"
-                android:layout_width="0dp"
+                android:id="@+id/imgAnimal1"
+                android:layout_width="411dp"
                 android:layout_height="293dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:srcCompat="@drawable/animalExemplo"
-                tools:layout_editor_absoluteY="-16dp" />
+                android:layout_gravity="top|center_horizontal"
+                android:layout_marginTop="-30dp"
+                app:srcCompat="@drawable/exemploanimal" />
 
             <TextView
-                android:id="@+id/seta3"
+                android:id="@+id/setaAnimais"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -37,33 +38,29 @@
                 android:rotation="180"
                 android:text="➜"
                 android:textColor="#1B485F"
-                android:textSize="32sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:textSize="32sp" />
 
             <ImageButton
                 android:id="@+id/profileButtonAnimais"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="right"
                 android:layout_marginTop="45dp"
                 android:layout_marginEnd="36dp"
                 android:background="@null"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/profilebutton" />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardAnimais"
                 android:layout_width="411dp"
                 android:layout_height="800dp"
+                android:layout_gravity="top|center_horizontal"
+                android:layout_marginTop="220dp"
                 android:backgroundTint="#8FBE9E"
-                app:cardCornerRadius="30dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:layout_editor_absoluteY="241dp">
+                app:cardCornerRadius="30dp">
 
                 <TextView
-                    android:id="@+id/textView"
+                    android:id="@+id/textTituloAnimal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center|top"
@@ -74,7 +71,7 @@
                     android:textSize="32sp" />
 
                 <TextView
-                    android:id="@+id/textView22"
+                    android:id="@+id/textQts"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="left"
@@ -86,7 +83,7 @@
                     android:textSize="16sp" />
 
                 <TextView
-                    android:id="@+id/textView23"
+                    android:id="@+id/textEstado"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="right"
@@ -98,6 +95,7 @@
                     android:textSize="16sp" />
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/cardQts"
                     android:layout_width="154dp"
                     android:layout_height="29dp"
                     android:layout_gravity="left"
@@ -107,6 +105,7 @@
                     app:cardCornerRadius="10dp" />
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/cardEstado"
                     android:layout_width="154dp"
                     android:layout_height="29dp"
                     android:layout_gravity="right"
@@ -116,7 +115,7 @@
                     app:cardCornerRadius="10dp" />
 
                 <TextView
-                    android:id="@+id/textView24"
+                    android:id="@+id/tituloSobreAnimais"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="top|left"
@@ -128,21 +127,23 @@
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/textView25"
+                    android:id="@+id/textSobreAnimais"
                     android:layout_width="329dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="top|left"
                     android:layout_marginLeft="45dp"
                     android:layout_marginTop="230dp"
                     android:justificationMode="inter_word"
-                    android:text="Sed ut perspiciatis unde omnis iste natus error sit  voluptatem accusantium doloremque laudantium,   rem aperiam, eaque ipsa quae ab illo inventore verit  quasi architecto beatae vitae dicta sunt explicabo, ipsam voluptatem quia voluptas sit aspernatur auteaque ipsa quae ab illo inventore." />
+                    android:text="Sed ut perspiciatis unde omnis iste natus error sit  voluptatem accusantium doloremque laudantium,   rem aperiam, eaque ipsa quae ab illo inventore verit  quasi architecto beatae vitae dicta sunt explicabo, ipsam voluptatem quia voluptas sit aspernatur auteaque ipsa quae ab illo inventore."
+                    android:textColor="#151817" />
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/cardFotos"
                     android:layout_width="411dp"
                     android:layout_height="400dp"
                     android:layout_gravity="bottom"
                     android:backgroundTint="#B3E3C2"
-                    app:cardCornerRadius="20dp" >
+                    app:cardCornerRadius="40dp">
 
                     <TableLayout
                         android:layout_width="match_parent"
@@ -151,12 +152,11 @@
                         <TableRow
                             android:layout_width="match_parent"
                             android:layout_height="match_parent" />
-
                     </TableLayout>
                 </androidx.cardview.widget.CardView>
 
             </androidx.cardview.widget.CardView>
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        </FrameLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

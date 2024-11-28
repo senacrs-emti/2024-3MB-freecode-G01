@@ -105,7 +105,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="39dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="35dp"
         android:layout_marginEnd="207dp"
         android:fontFamily="@font/londrina_solid"
         android:text="Desenvolvedores"
@@ -122,11 +122,13 @@
         android:layout_height="70dp"
         android:layout_marginStart="39dp"
         android:layout_marginTop="19dp"
+        android:layout_marginEnd="1dp"
         android:layout_marginBottom="10dp"
         app:cardCornerRadius="10dp"
         app:layout_constraintBottom_toTopOf="@+id/perfilDev2"
+        app:layout_constraintEnd_toStartOf="@+id/textPerfil1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textDevs" >
+        app:layout_constraintTop_toBottomOf="@+id/textDevs">
 
         <ImageView
             android:id="@+id/imgPerfilDev1"
@@ -142,11 +144,13 @@
         android:layout_height="70dp"
         android:layout_marginStart="39dp"
         android:layout_marginTop="10dp"
+        android:layout_marginEnd="1dp"
         android:layout_marginBottom="10dp"
         app:cardCornerRadius="10dp"
         app:layout_constraintBottom_toTopOf="@+id/perfilDev3"
+        app:layout_constraintEnd_toStartOf="@+id/textPerfil2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/perfilDev1" >
+        app:layout_constraintTop_toBottomOf="@+id/perfilDev1">
 
         <ImageView
             android:id="@+id/imgPerfilDev2"
@@ -162,9 +166,11 @@
         android:layout_height="70dp"
         android:layout_marginStart="39dp"
         android:layout_marginTop="10dp"
+        android:layout_marginEnd="1dp"
         android:layout_marginBottom="19dp"
         app:cardCornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textPerfil3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/perfilDev2">
 
@@ -181,7 +187,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
-        android:layout_marginTop="22dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="216dp"
         android:fontFamily="@font/amaranth"
         android:text="Ellen Vargas"
@@ -196,9 +202,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
-        android:layout_marginTop="1dp"
         android:layout_marginEnd="203dp"
-        android:layout_marginBottom="1dp"
         android:fontFamily="@font/amaranth"
         android:text="Pedro Santana"
         android:textColor="#1B485F"
@@ -212,11 +216,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="15dp"
         android:layout_marginEnd="188dp"
         android:fontFamily="@font/amaranth"
         android:text="Raphael Barcelos"
         android:textColor="#1B485F"
+        app:layout_constraintBottom_toTopOf="@+id/textPerfil6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/perfilDev3"
         app:layout_constraintTop_toBottomOf="@+id/textPerfil8" />
@@ -226,7 +231,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="13dp"
-        android:layout_marginTop="1dp"
         android:layout_marginEnd="236dp"
         android:fontFamily="@font/amaranth"
         android:text="Designer"
@@ -269,7 +273,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="13dp"
-        android:layout_marginTop="1dp"
         android:layout_marginEnd="269dp"
         android:layout_marginBottom="37dp"
         android:text="git:"
@@ -287,7 +290,7 @@
         android:layout_marginStart="13dp"
         android:layout_marginTop="1dp"
         android:layout_marginEnd="270dp"
-        android:layout_marginBottom="36dp"
+        android:layout_marginBottom="20dp"
         android:text="git:"
         android:textColor="#1B485F"
         app:layout_constraintBottom_toTopOf="@+id/textPerfil3"
