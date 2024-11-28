@@ -12,13 +12,13 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class Mamiferos extends AppCompatActivity {
+public class Anfibios extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_mamiferos);
+        setContentView(R.layout.activity_anfibios);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -31,14 +31,14 @@ public class Mamiferos extends AppCompatActivity {
         voltar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Mamiferos.this, Home.class);
+                Intent intent = new Intent(Anfibios.this, Home.class);
                 startActivity(intent);
             }
         });
         buttonPagAnimais.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Mamiferos.this, PagAnimais.class);
+                Intent intent = new Intent(Anfibios.this, PagAnimais.class);
                 startActivity(intent);
             }
         });

@@ -13,6 +13,21 @@
         android:theme="@style/Theme.Home"
         tools:targetApi="31">
         <activity
+            android:name=".Peixes"
+            android:exported="false" />
+        <activity
+            android:name=".Repteis"
+            android:exported="false" />
+        <activity
+            android:name=".Aves"
+            android:exported="false" />
+        <activity
+            android:name=".Plantas"
+            android:exported="false" />
+        <activity
+            android:name=".Anfibios"
+            android:exported="false" />
+        <activity
             android:name=".Mamiferos"
             android:exported="false" />
         <activity
