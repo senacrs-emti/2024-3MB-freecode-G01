@@ -55,6 +55,41 @@ public class Home extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        anfibiosButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Home.this, Anfibios.class);
+                startActivity(intent);
+            }
+        });
+        plantasButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Home.this, Plantas.class);
+                startActivity(intent);
+            }
+        });
+        avesButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Home.this, Aves.class);
+                startActivity(intent);
+            }
+        });
+        repteisButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Home.this, Repteis.class);
+                startActivity(intent);
+            }
+        });
+        peixesButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Home.this, Peixes.class);
+                startActivity(intent);
+            }
+        });
         devButton.setOnClickListener((new View.OnClickListener() {
             @Override
             public void onClick(View v) {
