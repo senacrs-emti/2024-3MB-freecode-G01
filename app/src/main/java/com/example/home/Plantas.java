@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -27,6 +28,7 @@ public class Plantas extends AppCompatActivity {
 
         TextView voltar = findViewById(R.id.setaAnimais);
         Button buttonPagAnimais = findViewById(R.id.buttonTesteM);
+        ImageButton perfilAnimais = findViewById(R.id.profileButtonPlantas);
 
         voltar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,6 +41,13 @@ public class Plantas extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Plantas.this, PagAnimais.class);
+                startActivity(intent);
+            }
+        });
+        perfilAnimais.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Plantas.this, Login.class);
                 startActivity(intent);
             }
         });

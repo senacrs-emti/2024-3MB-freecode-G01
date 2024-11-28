@@ -146,7 +146,7 @@
                 android:id="@+id/imageProfile1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@null"
+                android:background="@android:color/transparent"
                 android:scaleType="centerCrop"
                 app:srcCompat="@drawable/cajo" />
         </androidx.cardview.widget.CardView>
@@ -163,7 +163,7 @@
                 android:id="@+id/imageProfile2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@null"
+                android:background="@android:color/transparent"
                 android:scaleType="centerCrop"
                 app:srcCompat="@drawable/pato" />
         </androidx.cardview.widget.CardView>
@@ -181,7 +181,7 @@
                 android:id="@+id/imageProfile3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@null"
+                android:background="@android:color/transparent"
                 android:scaleType="centerCrop"
                 app:srcCompat="@drawable/urso" />
         </androidx.cardview.widget.CardView>
