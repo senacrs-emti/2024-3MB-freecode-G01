@@ -27,7 +27,7 @@ public class Peixes extends AppCompatActivity {
         });
 
         TextView voltar = findViewById(R.id.setaAnimais);
-        Button buttonPagAnimais = findViewById(R.id.buttonTesteM);
+        Button buttonPagAnimais = findViewById(R.id.buttonAnimaisThumb);
         ImageButton perfilAnimais = findViewById(R.id.profileButtonPeixes);
 
         voltar.setOnClickListener(new View.OnClickListener() {
