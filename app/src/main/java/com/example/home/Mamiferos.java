@@ -67,9 +67,9 @@ public class Mamiferos extends AppCompatActivity {
                 // Cria um botão para cada animal
                 for (int i = 0; i < animaisList.size(); i++) {
                     AnimaisExtintosModel animal = animaisList.get(i);
+                    Button button = new Button(Mamiferos.this);
 
                     // Cria um novo botão programaticamente
-                    Button button = new Button(Mamiferos.this);
                     button.setId(View.generateViewId()); // Gera um ID único para o botão
                     button.setText(animal.getNome());  // Define o nome do animal como texto do botão
                     button.setBackgroundColor(getResources().getColor(android.R.color.white));  // Define o fundo do botão
@@ -81,34 +81,38 @@ public class Mamiferos extends AppCompatActivity {
                             ConstraintLayout.LayoutParams.WRAP_CONTENT
                     );
                     layoutParams.setMargins(20, topMargin, 20, 20); // Define a margem superior
+                    button.setLayoutParams(layoutParams); // Aplica as margens e os parâmetros de layout ao botão
 
-                    // Aplica as margens e os parâmetros de layout ao botão
-                    button.setLayoutParams(layoutParams);
-
-                    // Adiciona o botão ao ConstraintLayout
-                    constraintLayout1.addView(button);
+                    // Adiciona o botão ao ConstraintLayout apropriado
+                    ConstraintLayout targetLayout = (i % 2 == 0) ? constraintLayout1 : constraintLayout2;
+                    targetLayout.addView(button);
 
                     // Cria uma nova ConstraintSet para configurar as constraints de cada botão
                     ConstraintSet constraintSet = new ConstraintSet();
-                    constraintSet.clone(constraintLayout1); // Clona as constraints do layout
+                    constraintSet.clone(targetLayout); // Clona as constraints do layout
 
-                    if (i == 0) {
+                    if (i == 0 || (i % 2 == 0 && i == 0) || (i % 2 != 0 && i == 1)) {
                         // Para o primeiro botão, ele vai ser fixado no topo do layout
-                        constraintSet.connect(button.getId(), ConstraintSet.TOP, constraintLayout1.getId(), ConstraintSet.TOP, 100);
+                        constraintSet.connect(button.getId(), ConstraintSet.TOP, targetLayout.getId(), ConstraintSet.TOP, 100);
                     } else {
                         // Para os botões seguintes, eles serão posicionados abaixo do botão anterior
-                        Button previousButton = (Button) constraintLayout1.getChildAt(i - 1); // Pega o botão anterior
-                        constraintSet.connect(button.getId(), ConstraintSet.TOP, previousButton.getId(), ConstraintSet.BOTTOM, 20);
+                        int previousIndex = (i % 2 == 0) ? (targetLayout.getChildCount() - 2) : (targetLayout.getChildCount() - 1);
+                        Button previousButton = (Button) targetLayout.getChildAt(previousIndex); // Pega o botão anterior
+                        if (previousButton != null) {
+                            constraintSet.connect(button.getId(), ConstraintSet.TOP, previousButton.getId(), ConstraintSet.BOTTOM, 20);
+                        } else {
+                            // Se o botão anterior for nulo, coloca o botão atual no topo
+                            constraintSet.connect(button.getId(), ConstraintSet.TOP, targetLayout.getId(), ConstraintSet.TOP, 100);
+                        }
                     }
 
                     // Alinha os botões ao centro (horizontalmente)
-                    constraintSet.connect(button.getId(), ConstraintSet.START, constraintLayout1.getId(), ConstraintSet.START, 20);
-                    constraintSet.connect(button.getId(), ConstraintSet.END, constraintLayout1.getId(), ConstraintSet.END, 20);
+                    constraintSet.connect(button.getId(), ConstraintSet.START, targetLayout.getId(), ConstraintSet.START, 20);
+                    constraintSet.connect(button.getId(), ConstraintSet.END, targetLayout.getId(), ConstraintSet.END, 20);
 
                     // Aplica as novas constraints ao layout
-                    constraintSet.applyTo(constraintLayout1);
+                    constraintSet.applyTo(targetLayout);
 
-                    // Atualiza a margem para o próximo botão
                     topMargin += 120; // Ajuste o valor conforme necessário (para o espaçamento entre os botões)
 
                     // Configura um OnClickListener para o botão
@@ -117,6 +121,8 @@ public class Mamiferos extends AppCompatActivity {
                         // Ação quando o botão é clicado (se necessário)
                     });
                 }
+
+
             } else {
                 Log.e("Mamiferos", "A lista de animais está vazia ou a requisição falhou.");
             }
