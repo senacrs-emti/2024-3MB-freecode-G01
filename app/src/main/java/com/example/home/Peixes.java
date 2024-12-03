@@ -47,7 +47,7 @@ public class Peixes extends AppCompatActivity {
         perfilAnimais.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Peixes.this, Login.class);
+                Intent intent = new Intent(Peixes.this, Cadastro.class);
                 startActivity(intent);
             }
         });

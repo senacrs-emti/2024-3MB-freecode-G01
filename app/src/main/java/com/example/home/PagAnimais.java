@@ -30,7 +30,7 @@ public class PagAnimais extends AppCompatActivity {
         profileAnimal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(PagAnimais.this, Login.class);
+                Intent intent = new Intent(PagAnimais.this, Cadastro.class);
                 startActivity(intent);
             }
         });

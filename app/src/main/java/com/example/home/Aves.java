@@ -47,7 +47,7 @@ public class Aves extends AppCompatActivity {
         perfilAnimais.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Aves.this, Login.class);
+                Intent intent = new Intent(Aves.this, Cadastro.class);
                 startActivity(intent);
             }
         });

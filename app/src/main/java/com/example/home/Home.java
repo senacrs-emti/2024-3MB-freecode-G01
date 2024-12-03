@@ -37,7 +37,7 @@ public class Home extends AppCompatActivity {
         profileButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Home.this, Login.class);
+                Intent intent = new Intent(Home.this, Cadastro.class);
                 startActivity(intent);
             }
         });
