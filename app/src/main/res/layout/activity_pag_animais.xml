@@ -22,7 +22,7 @@
             android:layout_height="wrap_content">
 
             <ImageView
-                android:id="@+id/imgAnimal1"
+                android:id="@+id/animalImage"
                 android:layout_width="411dp"
                 android:layout_height="293dp"
                 android:layout_gravity="top|center_horizontal"
@@ -60,7 +60,7 @@
                 app:cardCornerRadius="30dp">
 
                 <TextView
-                    android:id="@+id/textTituloAnimal"
+                    android:id="@+id/animalName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center|top"
@@ -127,7 +127,7 @@
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/textSobreAnimais"
+                    android:id="@+id/animalDescricao"
                     android:layout_width="329dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="top|left"

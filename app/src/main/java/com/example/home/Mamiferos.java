@@ -127,7 +127,13 @@ public class Mamiferos extends AppCompatActivity {
                         // Configura um OnClickListener para o botão
                         button.setOnClickListener(v -> {
                             Log.d("Button Clicked", "Animal: " + animal.getNome());
-                            // Ação quando o botão é clicado (se necessário)
+
+                            // Passa os dados para a PagAnimaisActivity
+                            Intent intent = new Intent(Mamiferos.this, PagAnimais.class);
+                            intent.putExtra("NOME_ANIMAL", animal.getNome());
+                            intent.putExtra("DESCRICAO_ANIMAL", animal.getSobre()); // Supondo que você tenha o método getDescricao()
+                            // Inicia a Activity de detalhes do animal
+                            startActivity(intent);
                         });
                     }
                 }
