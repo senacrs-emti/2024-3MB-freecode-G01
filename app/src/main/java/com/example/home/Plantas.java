@@ -47,7 +47,7 @@ public class Plantas extends AppCompatActivity {
         perfilAnimais.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Plantas.this, Login.class);
+                Intent intent = new Intent(Plantas.this, Cadastro.class);
                 startActivity(intent);
             }
         });

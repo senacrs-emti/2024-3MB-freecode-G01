@@ -49,7 +49,7 @@ public class PagAnimais extends AppCompatActivity {
         TextView animaisVoltar = findViewById(R.id.setaAnimais);
 
         profileAnimal.setOnClickListener(v -> {
-            Intent intent = new Intent(PagAnimais.this, Login.class);
+            Intent intent = new Intent(PagAnimais.this, Cadastro.class);
             startActivity(intent);
         });
 

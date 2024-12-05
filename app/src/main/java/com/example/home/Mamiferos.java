@@ -60,7 +60,7 @@ public class Mamiferos extends AppCompatActivity {
 
         // Configuração do botão de perfil (Login)
         perfilAnimais.setOnClickListener(v -> {
-            Intent intentPerfil = new Intent(Mamiferos.this, Login.class);
+            Intent intentPerfil = new Intent(Mamiferos.this, Cadastro.class);
             startActivity(intentPerfil);
         });
 

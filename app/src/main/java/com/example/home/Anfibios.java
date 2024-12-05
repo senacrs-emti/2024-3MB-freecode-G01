@@ -47,7 +47,7 @@ public class Anfibios extends AppCompatActivity {
         perfilAnimais.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Anfibios.this, Login.class);
+                Intent intent = new Intent(Anfibios.this, Cadastro.class);
                 startActivity(intent);
             }
         });

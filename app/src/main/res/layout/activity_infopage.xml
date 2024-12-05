@@ -65,25 +65,11 @@
                 android:layout_marginStart="37dp"
                 android:layout_marginTop="34dp"
                 android:layout_marginEnd="39dp"
+                android:backgroundTint="#1B485F"
                 app:cardCornerRadius="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/setaInfopage">
-
-                <ImageView
-                    android:id="@+id/fundoDev1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:scaleType="centerCrop"
-                    app:srcCompat="@drawable/image1" />
-
-                <ImageView
-                    android:id="@+id/fundoDev2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:alpha="0.8"
-                    android:scaleType="centerCrop"
-                    app:srcCompat="@drawable/image2" />
 
                 <TextView
                     android:id="@+id/textCardEsp1"
@@ -123,13 +109,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/cardEspecies" >
 
-                <ImageView
-                    android:id="@+id/fundoCausas"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:scaleType="centerCrop"
-                    app:srcCompat="@drawable/fundo2" />
-
                 <TextView
                     android:id="@+id/textCausas1"
                     android:layout_width="wrap_content"
@@ -166,13 +145,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/cardCausas" >
 
-                <ImageView
-                    android:id="@+id/fundoAmbiente"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:scaleType="centerCrop"
-                    app:srcCompat="@drawable/fundo3" />
-
                 <TextView
                     android:id="@+id/textAmbiente1"
                     android:layout_width="wrap_content"
@@ -208,13 +180,6 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/cardAmbiente">
-
-                <ImageView
-                    android:id="@+id/fundoConserv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:scaleType="centerCrop"
-                    app:srcCompat="@drawable/fundo4" />
 
                 <TextView
                     android:id="@+id/textConserv1"
