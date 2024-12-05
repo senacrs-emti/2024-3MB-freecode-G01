@@ -132,6 +132,8 @@ public class Mamiferos extends AppCompatActivity {
                             Intent intent = new Intent(Mamiferos.this, PagAnimais.class);
                             intent.putExtra("NOME_ANIMAL", animal.getNome());
                             intent.putExtra("DESCRICAO_ANIMAL", animal.getSobre()); // Supondo que você tenha o método getDescricao()
+                            intent.putExtra("ESTADO_ANIMAL", animal.getEstado());
+                            intent.putExtra("EXISTENTES_ANIMAL", animal.getExistentes());
                             // Inicia a Activity de detalhes do animal
                             startActivity(intent);
                         });

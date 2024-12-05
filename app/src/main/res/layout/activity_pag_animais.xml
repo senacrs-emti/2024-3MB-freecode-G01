@@ -102,7 +102,14 @@
                     android:layout_marginLeft="30dp"
                     android:layout_marginTop="125dp"
                     app:cardBackgroundColor="#FFF5D1"
-                    app:cardCornerRadius="10dp" />
+                    app:cardCornerRadius="10dp" >
+
+                    <TextView
+                        android:id="@+id/animalExistentes"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="TextView" />
+                </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardEstado"
@@ -112,7 +119,14 @@
                     android:layout_marginTop="125dp"
                     android:layout_marginRight="40dp"
                     app:cardBackgroundColor="#FFF5D1"
-                    app:cardCornerRadius="10dp" />
+                    app:cardCornerRadius="10dp" >
+
+                    <TextView
+                        android:id="@+id/animalEstado"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="TextView" />
+                </androidx.cardview.widget.CardView>
 
                 <TextView
                     android:id="@+id/tituloSobreAnimais"

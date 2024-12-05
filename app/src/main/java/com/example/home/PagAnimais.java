@@ -28,14 +28,21 @@ public class PagAnimais extends AppCompatActivity {
         // Recebe os dados passados pela Intent
         String nomeAnimal = getIntent().getStringExtra("NOME_ANIMAL");
         String descricaoAnimal = getIntent().getStringExtra("DESCRICAO_ANIMAL");
-        int imagemAnimal = getIntent().getIntExtra("IMAGEM_ANIMAL", R.drawable.ic_launcher_background); // Use um drawable default se não for fornecido
+        String estadoAnimal = getIntent().getStringExtra("ESTADO_ANIMAL");
+        String existentesAnimal = String.valueOf(getIntent().getIntExtra("EXISTENTES_ANIMAL", 0));  // Converte o inteiro para string
+
+
 
         // Exibe os dados na interface
         TextView animalNome = findViewById(R.id.animalName);
         TextView animalDescricao = findViewById(R.id.animalDescricao);
+        TextView animalEstado = findViewById(R.id.animalEstado);
+        TextView animalExistentes = findViewById(R.id.animalExistentes);
 
         animalNome.setText(nomeAnimal);
         animalDescricao.setText(descricaoAnimal);
+        animalEstado.setText(estadoAnimal);
+        animalExistentes.setText(existentesAnimal);
 
         // Configura os botões de navegação
         ImageButton profileAnimal = findViewById(R.id.profileButtonAnimais);
