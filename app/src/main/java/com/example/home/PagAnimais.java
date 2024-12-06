@@ -1,8 +1,11 @@
 package com.example.home;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -10,6 +13,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import com.squareup.picasso.Picasso;
 
 public class PagAnimais extends AppCompatActivity {
 
@@ -30,7 +35,7 @@ public class PagAnimais extends AppCompatActivity {
         String descricaoAnimal = getIntent().getStringExtra("DESCRICAO_ANIMAL");
         String estadoAnimal = getIntent().getStringExtra("ESTADO_ANIMAL");
         String existentesAnimal = String.valueOf(getIntent().getIntExtra("EXISTENTES_ANIMAL", 0));  // Converte o inteiro para string
-
+        String imgAnimal = getIntent().getStringExtra("IMG_ANIMAL");
 
 
         // Exibe os dados na interface
@@ -38,11 +43,20 @@ public class PagAnimais extends AppCompatActivity {
         TextView animalDescricao = findViewById(R.id.animalDescricao);
         TextView animalEstado = findViewById(R.id.animalEstado);
         TextView animalExistentes = findViewById(R.id.animalExistentes);
+        ImageView animalImage = findViewById(R.id.animalImage);
+        String imageUrl = imgAnimal;
+
+
 
         animalNome.setText(nomeAnimal);
         animalDescricao.setText(descricaoAnimal);
         animalEstado.setText(estadoAnimal);
         animalExistentes.setText(existentesAnimal);
+        Picasso.get()
+                .load(imageUrl)
+                .into(animalImage);
+        Log.d("img","img" + imageUrl + "img2" + imgAnimal);
+
 
         // Configura os botões de navegação
         ImageButton profileAnimal = findViewById(R.id.profileButtonAnimais);

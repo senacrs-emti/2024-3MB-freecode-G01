@@ -52,7 +52,8 @@ public class NetworkUtilAnimaisExtintos {
                                 ", Sobre: " + animal.getSobre() +
                                 ", Classe: " + animal.getClasse() +
                                 ", Existentes: " + animal.getExistentes() +
-                                ", Estado: " + animal.getEstado());
+                                ", Estado: " + animal.getEstado() +
+                                ", Imagem: " + animal.getImg());
                     }
 
                     // Se você precisar atualizar a UI, use Handler para rodar na thread principal

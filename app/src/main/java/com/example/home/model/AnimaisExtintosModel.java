@@ -2,6 +2,7 @@ package com.example.home.model;
 
 import android.os.Parcel;
 import android.os.Parcelable;
+import android.util.Log;
 
 public class AnimaisExtintosModel implements Parcelable {
     private int id;            // ID do animal extinto
@@ -10,19 +11,21 @@ public class AnimaisExtintosModel implements Parcelable {
     private int classe;        // Classe do animal (como mamífero, réptil, etc.)
     private int existentes;    // Número de animais existentes
     private String estado;     // Estado do animal (extinto, em extinção, etc.)
+    private String img;
 
     // Construtor padrão
     public AnimaisExtintosModel() {
     }
 
     // Construtor com todos os campos
-    public AnimaisExtintosModel(int id, String nome, String sobre, int classe, int existentes, String estado) {
+    public AnimaisExtintosModel(int id, String nome, String sobre, int classe, int existentes, String estado, String img) {
         this.id = id;
         this.nome = nome;
         this.sobre = sobre;
         this.classe = classe;
         this.existentes = existentes;
         this.estado = estado;
+        this.img = img;
     }
 
     // Getters e Setters
@@ -70,6 +73,13 @@ public class AnimaisExtintosModel implements Parcelable {
     public void setEstado(String estado) {
         this.estado = estado;
     }
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
+    }
 
     // Implementação do Parcelable
 
@@ -81,7 +91,10 @@ public class AnimaisExtintosModel implements Parcelable {
         classe = in.readInt();
         existentes = in.readInt();
         estado = in.readString();
+        img = in.readString();
+        Log.d("Teste", "Img no Parcel: " + img);  // Log para verificar o valor de 'img' no Parcel
     }
+
 
     // Método que cria o array de objetos Parcelable
     public static final Creator<AnimaisExtintosModel> CREATOR = new Creator<AnimaisExtintosModel>() {
@@ -110,5 +123,7 @@ public class AnimaisExtintosModel implements Parcelable {
         dest.writeInt(classe);
         dest.writeInt(existentes);
         dest.writeString(estado);
+        dest.writeString(img);
     }
+
 }

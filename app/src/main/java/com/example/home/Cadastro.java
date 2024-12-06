@@ -23,7 +23,7 @@ import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-public class Cadastro extends AppCompatActivity {
+public class    Cadastro extends AppCompatActivity {
 
     private ImageButton imageProfile1, imageProfile2, imageProfile3;
     private CardView cardPerfil1, cardPerfil2, cardPerfil3;

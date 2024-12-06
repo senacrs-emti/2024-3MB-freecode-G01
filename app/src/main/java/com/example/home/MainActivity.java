@@ -42,13 +42,14 @@ public class MainActivity extends AppCompatActivity {
         NetworkUtilAnimaisExtintos networkUtilAnimaisExtintos = new NetworkUtilAnimaisExtintos();
         networkUtilAnimaisExtintos.getRequestWithOkHttp();
 
-        // Atraso para esperar a requisição da API
+        // Usar um Handler para aguardar a requisição assíncrona
         new android.os.Handler().postDelayed(() -> {
-            // Obter a lista de animais após a requisição
             animaisList = networkUtilAnimaisExtintos.getAnimaisList();
+
+            // Verificar se a lista foi carregada corretamente
             if (animaisList != null && !animaisList.isEmpty()) {
                 // Exibir um Toast quando a lista for carregada com sucesso
-                Toast.makeText(MainActivity.this, "Pronto para iniciar ", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Pronto para iniciar", Toast.LENGTH_SHORT).show();
                 Log.d("MainActivity", "Número de animais carregados: " + animaisList.size());
             } else {
                 // Exibir um Toast em caso de erro ou lista vazia
@@ -56,14 +57,19 @@ public class MainActivity extends AppCompatActivity {
                 Log.e("MainActivity", "A lista de animais está vazia ou a requisição falhou.");
             }
 
-            // Configurar o listener para o botão
+            // Configurar o listener para o botão de iniciar
             button.setOnClickListener(v -> {
                 // Passar a lista de animais para a HomeActivity
                 Intent intent = new Intent(MainActivity.this, Home.class);
-                intent.putParcelableArrayListExtra("ANIMAIS_LIST", new java.util.ArrayList<>(animaisList));
-                startActivity(intent);
+                if (animaisList != null && !animaisList.isEmpty()) {
+                    intent.putParcelableArrayListExtra("ANIMAIS_LIST", new java.util.ArrayList<>(animaisList));
+                    startActivity(intent);
+                } else {
+                    // Caso a lista esteja vazia ou não tenha sido carregada
+                    Toast.makeText(MainActivity.this, "Nenhum animal encontrado", Toast.LENGTH_SHORT).show();
+                }
             });
 
-        }, 2000); // Tempo de atraso para simular o tempo da requisição
+        }, 2000); // Pode substituir esse atraso por outro método mais eficaz, se necessário
     }
 }

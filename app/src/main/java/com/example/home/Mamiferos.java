@@ -61,7 +61,7 @@ public class Mamiferos extends AppCompatActivity {
         // Configuração do botão de perfil (Login)
         perfilAnimais.setOnClickListener(v -> {
             Intent intentPerfil = new Intent(Mamiferos.this, Cadastro.class);
-            startActivity(intentPerfil);
+            startActivity(intentPerfil) ;
         });
 
         // Se a lista de animais não estiver vazia, começa a criar os botões
@@ -124,10 +124,13 @@ public class Mamiferos extends AppCompatActivity {
                         detailIntent.putExtra("DESCRICAO_ANIMAL", animal.getSobre());
                         detailIntent.putExtra("ESTADO_ANIMAL", animal.getEstado());
                         detailIntent.putExtra("EXISTENTES_ANIMAL", animal.getExistentes());
+                        detailIntent.putExtra("IMG_ANIMAL", animal.getImg());
                         startActivity(detailIntent);
                     });
                 }
             }
         }
+
     }
+
 }
