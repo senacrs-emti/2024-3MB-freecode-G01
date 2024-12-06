@@ -54,8 +54,7 @@ public class Plantas extends AppCompatActivity {
 
         // Configuração do botão voltar
         voltar.setOnClickListener(v -> {
-            Intent backIntent = new Intent(Plantas.this, Home.class);
-            startActivity(backIntent);
+            onBackPressed();
         });
 
         // Configuração do botão de perfil (Login)

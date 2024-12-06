@@ -54,8 +54,7 @@ public class Mamiferos extends AppCompatActivity {
 
         // Configuração do botão voltar
         voltar.setOnClickListener(v -> {
-            Intent backIntent = new Intent(Mamiferos.this, Home.class);
-            startActivity(backIntent);
+            onBackPressed();
         });
 
         // Configuração do botão de perfil (Login)
@@ -130,7 +129,6 @@ public class Mamiferos extends AppCompatActivity {
                 }
             }
         }
-
     }
 
 }

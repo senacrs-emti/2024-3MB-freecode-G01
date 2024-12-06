@@ -54,8 +54,7 @@ public class Peixes extends AppCompatActivity {
 
         // Configuração do botão voltar
         voltar.setOnClickListener(v -> {
-            Intent backIntent = new Intent(Peixes.this, Home.class);
-            startActivity(backIntent);
+            onBackPressed();
         });
 
         // Configuração do botão de perfil (Login)

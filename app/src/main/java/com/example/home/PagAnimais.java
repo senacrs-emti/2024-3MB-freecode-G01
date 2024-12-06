@@ -64,13 +64,12 @@ public class PagAnimais extends AppCompatActivity {
 
         // Alterando o comportamento do botão de voltar para considerar o tipo do animal
         animaisVoltar.setOnClickListener(v -> {
-            Intent intent;
-            if ("AVE".equals(tipoAnimal)) {
-                intent = new Intent(PagAnimais.this, Aves.class);  // Redireciona para a tela de aves
-            } else {
-                intent = new Intent(PagAnimais.this, Mamiferos.class);  // Redireciona para a tela de mamíferos
-            }
-            startActivity(intent);
+            // Chama o método onBackPressed(), que simula o comportamento do botão "voltar" do celular
+            onBackPressed();
         });
+
+
+
+
     }
 }
