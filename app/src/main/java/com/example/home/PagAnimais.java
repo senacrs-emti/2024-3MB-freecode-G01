@@ -1,5 +1,4 @@
 package com.example.home;
-
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -15,7 +14,6 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.squareup.picasso.Picasso;
-
 public class PagAnimais extends AppCompatActivity {
 
     @Override
@@ -36,7 +34,7 @@ public class PagAnimais extends AppCompatActivity {
         String estadoAnimal = getIntent().getStringExtra("ESTADO_ANIMAL");
         String existentesAnimal = String.valueOf(getIntent().getIntExtra("EXISTENTES_ANIMAL", 0));  // Converte o inteiro para string
         String imgAnimal = getIntent().getStringExtra("IMG_ANIMAL");
-
+        String tipoAnimal = getIntent().getStringExtra("TIPO_ANIMAL");  // Novo parâmetro para determinar se é ave ou mamífero
 
         // Exibe os dados na interface
         TextView animalNome = findViewById(R.id.animalName);
@@ -45,8 +43,6 @@ public class PagAnimais extends AppCompatActivity {
         TextView animalExistentes = findViewById(R.id.animalExistentes);
         ImageView animalImage = findViewById(R.id.animalImage);
         String imageUrl = imgAnimal;
-
-
 
         animalNome.setText(nomeAnimal);
         animalDescricao.setText(descricaoAnimal);
@@ -57,7 +53,6 @@ public class PagAnimais extends AppCompatActivity {
                 .into(animalImage);
         Log.d("img","img" + imageUrl + "img2" + imgAnimal);
 
-
         // Configura os botões de navegação
         ImageButton profileAnimal = findViewById(R.id.profileButtonAnimais);
         TextView animaisVoltar = findViewById(R.id.setaAnimais);
@@ -67,8 +62,14 @@ public class PagAnimais extends AppCompatActivity {
             startActivity(intent);
         });
 
+        // Alterando o comportamento do botão de voltar para considerar o tipo do animal
         animaisVoltar.setOnClickListener(v -> {
-            Intent intent = new Intent(PagAnimais.this, Mamiferos.class);
+            Intent intent;
+            if ("AVE".equals(tipoAnimal)) {
+                intent = new Intent(PagAnimais.this, Aves.class);  // Redireciona para a tela de aves
+            } else {
+                intent = new Intent(PagAnimais.this, Mamiferos.class);  // Redireciona para a tela de mamíferos
+            }
             startActivity(intent);
         });
     }
