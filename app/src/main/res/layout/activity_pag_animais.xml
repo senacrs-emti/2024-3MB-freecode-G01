@@ -108,7 +108,12 @@
                         android:id="@+id/animalExistentes"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="TextView" />
+                        android:fontFamily="@font/amaranth"
+                        android:paddingTop="3dp"
+                        android:text="Texto1"
+                        android:textAlignment="center"
+                        android:textColor="#E17C39"
+                        android:textSize="16sp" />
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
@@ -125,7 +130,12 @@
                         android:id="@+id/animalEstado"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="TextView" />
+                        android:fontFamily="@font/amaranth"
+                        android:paddingTop="3dp"
+                        android:text="Texto2"
+                        android:textAlignment="center"
+                        android:textColor="#E17C39"
+                        android:textSize="16sp" />
                 </androidx.cardview.widget.CardView>
 
                 <TextView
